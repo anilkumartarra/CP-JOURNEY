@@ -49,8 +49,8 @@ void preorder(node *root)
     else
     {
         cout<<root->data<<" ";
-        inorder(root->left);
-        inorder(root->right);
+        preorder(root->left);
+        preorder(root->right);
     }
 }
 void postorder(node *root)
@@ -61,8 +61,8 @@ void postorder(node *root)
     }
     else
     {
-        inorder(root->left);
-        inorder(root->right);
+        postorder(root->left);
+        postorder(root->right);
         cout<<root->data<<" ";
     }
 }
