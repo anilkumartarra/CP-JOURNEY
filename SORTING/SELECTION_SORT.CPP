@@ -20,10 +20,10 @@ int main()
             {
                 min=j;
             }
-            temp=a[min];
-            a[min]=a[i];
-            a[i]=temp;
         }
+        temp=a[min];
+        a[min]=a[i];
+        a[i]=temp;
     }
     for(int i=0;i<n;i++)
     {
