@@ -62,12 +62,12 @@ node *InsertATPos(node *head,int pos,int x)
 //Display
 void display(node *head)
 {
-    while(head!=NULL)
+    while(head->next!=NULL)
     {
-        cout<<head->data<<" ";
+        cout<<head->data<<"->";
         head=head->next;
     }
-    cout<<endl;
+    cout<<head->data;
 }
 int main() 
 {
