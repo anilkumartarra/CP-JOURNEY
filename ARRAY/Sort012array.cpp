@@ -26,7 +26,7 @@ void sort012(int a[],int n)
   {
     a[i]=1;
   }
-  for(int i=(count0+count2);i<n;i++)
+  for(int i=(count0+count1);i<n;i++)
   {
     a[i]=2;
   }
