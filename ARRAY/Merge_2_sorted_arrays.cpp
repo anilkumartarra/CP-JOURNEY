@@ -47,3 +47,54 @@ int main()
     }
     return 0;
 }
+
+
+//optimized
+#include<bits/stdc++.h>
+using namespace std;
+
+void mergearrays(int a[],int b[],int n,int m)
+{
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]>b[0])
+        {
+            swap(a[i],b[0]);
+            int first = b[0];
+            int k;
+            for( k=1;k<m && b[k]<first;k++)
+            {
+                b[k-1]=b[k];
+            }
+            b[k-1]=first;
+        }
+    }
+}
+
+
+int main()
+{
+    int n,m;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    cin>>m;
+    int b[m];
+    for(int i=0;i<m;i++)
+    {
+        cin>>b[i];
+    }
+    mergearrays(a,b,n,m);
+    for(int i=0;i<n;i++)
+    {
+        cout<<a[i]<<" ";
+    }
+    cout<<endl;
+    for(int i=0;i<m;i++)
+    {
+        cout<<b[i]<<" ";
+    }
+}
